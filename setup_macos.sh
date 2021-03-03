@@ -46,8 +46,6 @@ then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-source $ZSH/oh-my-zsh.sh
-
 # Setup
 mkdir "~/5Minds"
 mkdir "~/.ssh"
@@ -71,6 +69,15 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Setup project folder
+REPO_NAME="$(id -F | tr ' ' '.' | tr '[:upper:]' '[:lower:]')"
+
+echo $REPO_NAME
+
+mkdir -p ~/5Minds
+git -C clone git@github.com:5Minds-GSErle/${REPO_NAME}.git
+mkdir -p ~/5Minds/${REPO_NAME}/{Hangman,Galgenmännchen,FlappyBird}
 
 # Finish
 echo "You may stillt want to configure the following things:"

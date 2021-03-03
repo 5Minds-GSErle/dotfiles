@@ -9,8 +9,3 @@ Setup like this on macOS directly after finishing the installation:
 ```
 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/5Minds-GSErle/dotfiles/main/setup_macos.sh)"
 ```
-
-To initialize the project folder run:
-```
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/5Minds-GSErle/dotfiles/main/setup_project.sh)"
-```
