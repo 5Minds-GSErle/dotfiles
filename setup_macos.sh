@@ -78,6 +78,9 @@ REPO_NAME="$(id -F | tr ' ' '.' | tr '[:upper:]' '[:lower:]')"
 git clone git@github.com:5Minds-GSErle/${REPO_NAME}.git 5Minds
 mkdir -p ~/5Minds/${REPO_NAME}/{Hangman,Galgenmännchen,FlappyBird}
 
+# Setup venv manually
+# cd ~/5Minds/${REPO_NAME}/FlappyBird && pip3 install pygame && python3 -m venv venv && source ./venv/bin/activate
+
 # Finish
 echo "You may stillt want to configure the following things:"
 echo "  - Request password after lock immediately"
