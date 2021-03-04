@@ -50,7 +50,7 @@ fi
 mkdir "~/5Minds"
 mkdir "~/.ssh"
 
-git clone git://github.com/yylian/dotfiles.git $REPO_NAME
+git clone git://github.com/5minds-GSErle/dotfiles.git $REPO_NAME
 git config --global core.excludesfile '~/.gitignore'
 git config --global pull.rebase true
 
@@ -78,6 +78,8 @@ echo $REPO_NAME
 mkdir -p ~/5Minds
 git -C clone git@github.com:5Minds-GSErle/${REPO_NAME}.git
 mkdir -p ~/5Minds/${REPO_NAME}/{Hangman,Galgenmännchen,FlappyBird}
+
+compaudit | xargs chmod g-w
 
 # Finish
 echo "You may stillt want to configure the following things:"
