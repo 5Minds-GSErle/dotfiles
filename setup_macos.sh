@@ -75,10 +75,7 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Setup project folder
 REPO_NAME="$(id -F | tr ' ' '.' | tr '[:upper:]' '[:lower:]')"
 
-echo $REPO_NAME
-
-mkdir -p ~/5Minds
-git -C clone git@github.com:5Minds-GSErle/${REPO_NAME}.git
+git clone git@github.com:5Minds-GSErle/${REPO_NAME}.git 5Minds
 mkdir -p ~/5Minds/${REPO_NAME}/{Hangman,Galgenmännchen,FlappyBird}
 
 # Finish
