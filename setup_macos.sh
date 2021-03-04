@@ -46,6 +46,8 @@ then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+compaudit | xargs chmod g-w
+
 # Setup
 mkdir "~/5Minds"
 mkdir "~/.ssh"
@@ -78,8 +80,6 @@ echo $REPO_NAME
 mkdir -p ~/5Minds
 git -C clone git@github.com:5Minds-GSErle/${REPO_NAME}.git
 mkdir -p ~/5Minds/${REPO_NAME}/{Hangman,Galgenmännchen,FlappyBird}
-
-compaudit | xargs chmod g-w
 
 # Finish
 echo "You may stillt want to configure the following things:"
