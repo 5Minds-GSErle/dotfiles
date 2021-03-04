@@ -1,4 +1,4 @@
-#! /usr/bin/env zsh
+! /usr/bin/env zsh
 
 if [ "$(uname)" != "Darwin" ]
 then
@@ -41,7 +41,7 @@ APP_BREWS=(
 brew install $CLI_BREWS
 brew install --cask $APP_BREWS
 
-if [[ ! -f "$(echo $SHELL)" == "/bin/zsh" && ! -f "$(echo $SHELL)" == "/usr/bin/zsh" ]]
+if [[ ! "$(echo $SHELL)" == "/bin/zsh" && ! "$(echo $SHELL)" == "/usr/bin/zsh" ]]
 then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
