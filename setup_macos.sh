@@ -41,10 +41,10 @@ APP_BREWS=(
 brew install $CLI_BREWS
 brew install --cask $APP_BREWS
 
-# if [[ ! "$(echo $SHELL)" == "/bin/zsh" && ! "$(echo $SHELL)" == "/usr/bin/zsh" ]]
-# then
+if [[ ! "$(echo $SHELL)" == "/bin/zsh" && ! "$(echo $SHELL)" == "/usr/bin/zsh" ]]
+then
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-# fi
+fi
 
 compaudit | xargs chmod g-w
 
@@ -81,4 +81,5 @@ mkdir -p ~/5Minds/${REPO_NAME}/{Hangman,Galgenmännchen,FlappyBird}
 # Finish
 echo "You may stillt want to configure the following things:"
 echo "  - Request password after lock immediately"
+echo "  - Run: 'compaudit | xargs chmod g-w' if there are insecure directories"
 echo "Reboot."
